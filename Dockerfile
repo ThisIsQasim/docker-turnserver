@@ -1,6 +1,4 @@
-#FROM phusion/baseimage:0.9.18
 FROM debian:stretch-slim
-MAINTAINER Brian Prodoehl <bprodoehl@connectify.me>
 
 # Set correct environment variables.
 ENV HOME /root
@@ -23,4 +21,4 @@ RUN gdebi -n /tmp/coturn*.deb
 # Clean up APT when done.
 RUN rm /etc/apt/sources.list.d/backports.list && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-CMD /usr/bin/turnserver --no-cli 
+CMD /usr/bin/turnserver --no-cli
