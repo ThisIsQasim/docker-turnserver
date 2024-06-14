@@ -1,4 +1,4 @@
-FROM debian:buster-slim
+FROM debian:stable-slim
 
 # Set correct environment variables.
 ENV HOME /root
